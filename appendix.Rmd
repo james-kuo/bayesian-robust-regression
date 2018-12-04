@@ -1,0 +1,48 @@
+---
+title: "Untitled"
+author: "Jimmy Ting-Yuan Kuo"
+date: "12/21/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\pagebreak
+\section{Appendix}
+\subsection{Full Conditionals}
+\paragraph{$\boldsymbol{\lambda_1, \lambda_2,...,\lambda_n}$}
+
+\noindent Let $\lambda_{-i} := \lambda \setminus {\lambda_i}, \ RSS_i := (y_i - x^T_i\beta)^2$. The full conditional for $\lambda_i$ is immediately given as, 
+\begin{align}
+\begin{split}
+f(\lambda_i \mid \lambda_{-i}, \beta, \sigma^2, y,x) &\propto e^{-\frac{1}{2\sigma^2}\frac{(RSS_i)^2}{\lambda_i}} \lambda_i^{-\frac{v+1}{2} -1}e^{-\frac{v}{2\lambda_i}} = \lambda_i^{-(v+1)/2 -1} e^{-\frac{v\times RSS^2_i}{2\sigma^2\lambda_i}} \\
+&\sim IG\Big(\frac{v+1}{2}, \frac{v + \sigma^{-2}RSS_i}{2} \Big)
+\end{split}
+\end{align}
+\noindent Therefore the posterior of $\lambda$ is a joint distribution of independent inverse gamma's. 
+\paragraph{$\boldsymbol{\sigma^2}$}
+
+\noindent Let $S_{RSS} := (Y - X\beta)(Y- X\beta)^T$, $\textbf{tr}( \cdot )$ be the trace operator, then observe that by (9), full conditional for $\sigma^2$ can be written as, 
+\begin{align}
+\begin{split}
+f(\sigma^2 \mid \lambda, \beta Y, X) & \propto (\sigma^2)^{-(n + 2\alpha)/2} e^{-\frac{1}{2\sigma^2} \textbf{tr}\big( S_{RSS}\Lambda^{-1}\big)} \\
+&\sim IG\Big( \frac{n + 2(\alpha - 1)}{2},  \frac{\textbf{tr}\big( S_{RSS}\Lambda^{-1}\big)}{2} \Big) \\
+&= IG\Big( \frac{n + 2(\alpha - 1)}{2}, \frac{1}{2}\sum_{i=1}^n \frac{(y_i - x^T_i\beta)^2}{\lambda_i} \Big)
+\end{split}
+\end{align}
+
+\paragraph{$\boldsymbol{\beta}$}
+
+\noindent Expanding out the quadratic on the exponential in (9), the full conditional for $\beta$ then is, 
+\begin{align}
+\begin{split}
+f(\beta, \mid \sigma^2, \lambda, Y, X) &\propto \exp\{{-\frac{1}{2\sigma^2}\big((X\beta)^T\Lambda^{-1}X\beta -2 Y^T \Lambda^{-1}X\beta  \big)} \} \\
+&\sim \textbf{MVN}\big(\boldsymbol{\mu} , \boldsymbol{\Sigma} \big), \ \ \boldsymbol{\mu} = \boldsymbol{\Sigma}\times \big(X^T(\sigma^2\Lambda)^{-1}Y \big), \ \  \boldsymbol{\Sigma} = \big(X^T (\sigma^2 \Lambda)^{-1}X\big)^{-1}
+\end{split}
+\end{align}
+\noindent Notice that the mean of the full conditional for $\beta$ mimicks the frequentist Weighted Least Squares estimator for $\beta$, and the variance also mimicks the variance of the WLS estimator . 
+
+
