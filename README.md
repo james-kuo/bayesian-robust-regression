@@ -8,11 +8,11 @@ I implemented Gibbs Sampler in R to fit Bayesian student-t “Robust” regressi
 
 ## Some Pictures
 
-I compared the robust and gaussian models on a dataset with only 1 independent variable to aid visualization.
+I compared the robust and gaussian models on a dataset with only 1 independent variable so we can visualize.
 
-Right panel is when the quadratic term is added in addition to the linear term, and left panel is when only the linear term is present. Lower theta corresponds to a larger artificial shock added to the dataset. We can see that in the robust model, the regression line is much more stable under any level of shock in the robust regression compared to the gaussian regression. 
+Left panel is when the quadratic term is added in addition to the linear term, and right panel is when only the linear term is present. Lower theta value corresponds to a larger artificial outlier added to the dataset. We can see that in the robust model, regression lines are much more stable no matter how large the outlier compared to the gaussian regression. 
 ![Robust vs. Gaussian Model with Exponential noise](https://github.com/james-kuo/bayesian-robust-regression/blob/master/regression_plot.png)
 
 ### Posterior Distributions
-Shown below are the posterior distributions when only linear term is present. We can see that as the level of shock increases, the posterior distribution in the robust model does not change by much.
+Shown below are the posterior distributions when only linear term is present. We can see that as the outlier becomes "larger", the posterior distribution in the robust model does not change by much.
 ![Posterior Distributions of Robust vs. Gaussian Model](https://github.com/james-kuo/bayesian-robust-regression/blob/master/posterior_distributions.png)
