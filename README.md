@@ -7,4 +7,3 @@ I implemented Gibbs Sampler in R to fit Bayesian student-t “Robust” regressi
 `AnalysisMain.RData`, `Corrupt.RData`, `Corrupt2.RData`, and `Corrupt2alt.RData` contains the processed datasets. 
 
 ![Robust vs. Gaussian Model with Exponential Noise](https://github.com/james-kuo/bayesian-robust-regression/blob/master/posterior_distributions.png)
-Format: ![Alt Text](url)
