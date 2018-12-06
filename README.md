@@ -1,4 +1,4 @@
-I implemented Gibbs Sampler in R to fit Bayesian student-t “Robust” regression with Jeffrey’s prior on a dataset and compared it with Gaussian linear regression with Jeffrey’s prior. Artificial noises are added to a dataset under different settings to compare the posterior distributions of parameters of the student-t and Gaussian model. Compared model performances and robustness of posterior distributions.
+I implemented Gibbs Sampler in R to fit Bayesian student-t “Robust” regression with Jeffrey’s prior on a dataset and compared it with Gaussian linear regression with Jeffrey’s prior. Bayesian student-t regression uses the more fat-tailed t distribution as sampling distribution to adress the outlier problem in Gaussian regression. Artificial noises are added to a dataset under different settings to compare the posterior distributions of parameters of the student-t and Gaussian model. Compared model performances and robustness of posterior distributions.
 
 `Ting_Yuan_Kuo_Final_Project.pdf` is the paper. 
 
