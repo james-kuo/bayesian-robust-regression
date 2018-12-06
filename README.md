@@ -17,5 +17,5 @@ Left panel is when the quadratic term is added in addition to the linear term, a
 Shown below are the posterior distributions when only linear term is present. We can see that as the outlier becomes "larger", the posterior distribution in the robust model does not change by much.
 ![Posterior Distributions of Robust vs. Gaussian Model](https://github.com/james-kuo/bayesian-robust-regression/blob/master/posterior_distributions.png)
 
-1. <span id="f1"></span> Larger theta means a larger exponential shock with a larger expected value is added to high-leverage points in the dataset
+1. <span id="f1"></span> By larger outlier I mean a larger shock that is exponentially distributed is added to high-leverage points in the dataset, where $\theta$ is the rate parameter.
 
