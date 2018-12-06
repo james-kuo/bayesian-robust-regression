@@ -10,9 +10,12 @@ I implemented Gibbs Sampler in R to fit Bayesian student-t “Robust” regressi
 
 I compared the robust and gaussian models on a dataset with only 1 independent variable so we can visualize.
 
-Left panel is when the quadratic term is added in addition to the linear term, and right panel is when only the linear term is present. Lower theta value corresponds to a larger artificial outlier added to the dataset.<sup>1</sup> ^[Larger theta means a larger exponential shock (larger mean) is added to high-leverage points in the dataset] We can see that in the robust model, regression lines are much more stable no matter how large the outlier compared to the gaussian regression. 
+Left panel is when the quadratic term is added in addition to the linear term, and right panel is when only the linear term is present. Lower theta value corresponds to a larger artificial outlier added to the dataset. <span id="a1">[[1]](#f1)</span> We can see that in the robust model, regression lines are much more stable no matter how large the outlier compared to the gaussian regression. 
 ![Robust vs. Gaussian Model with Exponential noise](https://github.com/james-kuo/bayesian-robust-regression/blob/master/regression_plot.png)
 
 ### Posterior Distributions
 Shown below are the posterior distributions when only linear term is present. We can see that as the outlier becomes "larger", the posterior distribution in the robust model does not change by much.
 ![Posterior Distributions of Robust vs. Gaussian Model](https://github.com/james-kuo/bayesian-robust-regression/blob/master/posterior_distributions.png)
+
+1. <span id="f1"></span> Larger theta means a larger exponential shock with a larger expected value is added to high-leverage points in the dataset[$\hookleftarrow$](#a1)
+
