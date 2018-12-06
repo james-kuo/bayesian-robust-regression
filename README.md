@@ -14,7 +14,7 @@ Left panel is when the quadratic term is added in addition to the linear term, a
 ![Robust vs. Gaussian Model with Exponential noise](https://github.com/james-kuo/bayesian-robust-regression/blob/master/regression_plot.png)
 
 ### Posterior Distributions
-Shown below are the posterior distributions when only linear term is present. We can see that as the outlier becomes "larger", the posterior distribution in the robust model does not change by much.
+Shown below are the posterior distributions of the regression coefficient when only linear term is present. We can see that as the outlier becomes "larger", the posterior distribution in the robust model does not change by much.
 ![Posterior Distributions of Robust vs. Gaussian Model](https://github.com/james-kuo/bayesian-robust-regression/blob/master/posterior_distributions.png)
 
 1. <span id="f1"></span> By larger outlier I mean a larger exponentially distributed shock is added to high-leverage points in the data. theta is the rate parameter.
